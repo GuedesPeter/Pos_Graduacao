@@ -5,7 +5,7 @@ Ex.:
 NomeDaClasse.metodo()
 
 */
-
+console.log('------------------------- EXEMPLO 1 ---------------------------')
 class ValidadorDeCPF {
     constructor(cpf) {
         this.cpf = cpf;
@@ -28,4 +28,19 @@ console.log('----------------------------------------------------')
 // Chamando o método estático diretamente pela classe
 ValidadorDeCPF.validarCPF('01045409087'); // Saída: CPF Inválido!
 
+console.log('------------------------- EXEMPLO 2 ---------------------------')
 
+class ValidadorDeID {
+    static TAMANHO_ID = 5;
+
+    static validarId(tamanho) {
+        if (tamanho == ValidadorDeID.TAMANHO_ID) { 
+        } else {
+            console.log('Id Inválido');
+        }
+    }
+}
+
+ValidadorDeID.validarId(12345); // Saída: Id Válido!
+console.log('----------------------------------------------------')
+ValidadorDeID.validarId(123); // Saída: Id Inválido!
