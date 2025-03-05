@@ -44,3 +44,26 @@ class ValidadorDeID {
 ValidadorDeID.validarId(12345); // Saída: Id Válido!
 console.log('----------------------------------------------------')
 ValidadorDeID.validarId(123); // Saída: Id Inválido!
+
+
+console.log('------------------------- EXEMPLO 3 ---------------------------')
+
+class Pessoa { 
+    constructor(nome, anoDeNascimento, profissao) { 
+        this.nome = nome; 
+        this.anoDeNascimento = anoDeNascimento; 
+        this.profissao = profissao; 
+    }; 
+    
+    static saudar() { 
+        console.log('Bom dia!'); 
+    }; 
+    
+    calculaIdade() { 
+        return console.log(new Date().getFullYear() - this.anoDeNascimento) ;
+    }; 
+}; 
+
+console.log(Pessoa.saudar());
+const pessoa = new Pessoa('Maria', 1997, 'Advogada');
+pessoa.calculaIdade();
