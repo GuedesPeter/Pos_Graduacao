@@ -40,7 +40,7 @@ class Pessoa {
 
 
 
-class Estudante extends Pessoa {
+  class Estudante extends Pessoa {
     #matricula;
     notas = [];
   
@@ -60,9 +60,22 @@ class Estudante extends Pessoa {
     addNota(nota) {
       this.notas.push(nota);
     }
+  
+    // Remover uma nota com base na disciplina
+    removerNota(disciplina) {
+      this.notas = this.notas.filter(nota => nota.disciplina !== disciplina);
+    }
+  
+    // Listar todas as notas
+    listarNotas() {
+      return this.notas;
+    }
+  
+    // Buscar uma nota por disciplina
+    buscarNota(disciplina) {
+      return this.notas.find(nota => nota.disciplina === disciplina);
+    }
   }
-
-
   
   class Nota {
     constructor(disciplina, grau) {
@@ -71,3 +84,23 @@ class Estudante extends Pessoa {
     }
   }
   
+
+
+  // Criando instâncias
+const aluno = new Estudante(['Fulano', 'de Tal'], 1990, 'Estudante', 120901);
+
+// Adicionando notas
+const nota1 = new Nota('Matemática', 8);
+const nota2 = new Nota('Física', 9);
+aluno.addNota(nota1);
+aluno.addNota(nota2);
+
+// Listando todas as notas
+console.log(aluno.listarNotas());  // Exibe as duas notas
+
+// Buscando uma nota por disciplina
+console.log(aluno.buscarNota('Matemática'));  // Exibe a nota de Matemática
+
+// Removendo uma nota
+aluno.removerNota('Física');
+console.log(aluno.listarNotas());  // Exibe apenas a nota de Matemática
