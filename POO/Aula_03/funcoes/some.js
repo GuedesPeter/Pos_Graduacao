@@ -7,8 +7,8 @@
 // Exemplo 1: 
 
 array = [4,5,6,7,8,9,10]
-regraImpar = (item) => item%2 == 0
-console.log("Há algum número impar? " + array.some(regraImpar))
+regraPar = (item) => item%2 == 0
+console.log("Há algum número par? " + array.some(regraPar))
 
 // Exemplo 2: 
 
