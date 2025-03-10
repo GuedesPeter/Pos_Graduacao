@@ -13,6 +13,7 @@ Módulos – ES6
 
 */
 
+ // Exemplo 1: ----------------------------------------------------------------------
 
 class Carro {
     constructor(marca, modelo, ano) {
@@ -34,4 +35,29 @@ class Carro {
   
   // Exportando a classe Carro
   export default Carro;
+
   
+  // Exemplo 2: ----------------------------------------------------------------------
+
+class Carro {
+  constructor(marca, modelo, ano) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.ano = ano;
+    this.velocidade = 0;
+  }
+
+  acelerar(incremento) {
+    this.velocidade += incremento;
+    console.log(`O carro acelerou para ${this.velocidade} km/h.`);
+  }
+
+  exibirInfo() {
+    return `${this.marca} ${this.modelo} (${this.ano}) - Velocidade: ${this.velocidade} km/h`;
+  }
+}
+
+// Exportando a classe Carro
+export { Carro };
+
+
