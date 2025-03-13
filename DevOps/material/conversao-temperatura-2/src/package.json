@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KubeDev/conversao-temperatura.git"
+    "url": "git+https://github.com/GuedesPeter/Pos_Graduacao/tree/main/DevOps/material/conversao-temperatura-2"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KubeDev/conversao-temperatura/issues"
+    "url": "https://github.com/GuedesPeter/Pos_Graduacao/tree/main/DevOps/material/conversao-temperatura-2/issues"
   },
-  "homepage": "https://github.com/KubeDev/conversao-temperatura#readme",
+  "homepage": "https://github.com/GuedesPeter/Pos_Graduacao/tree/main/DevOps/material/conversao-temperatura-2#readme",
   "dependencies": {
     "chai": "^4.3.6",
     "ejs": "^3.1.8",
