@@ -4,6 +4,9 @@ FROM ubuntu
 # Atualiza a lista de pacotes
 RUN apt update
 
+# Instala o pacote do ifconfig
+RUN apt install net-tools --yes
+
 # Instala o curl
 RUN apt install curl --yes
 
