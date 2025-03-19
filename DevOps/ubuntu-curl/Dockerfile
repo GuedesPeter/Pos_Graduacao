@@ -1,17 +1,21 @@
-# Esta é uma imagem base Ubuntu
+#Modo concatenado [Não gera cache e instala tudo novamente sempre]
+
 FROM ubuntu
 
+RUN apt update && RUN apt install net-tools --yes && RUN apt install vim --yes && RUN apt install curl --yes
+
+
 # Atualiza a lista de pacotes
-RUN apt update
+#RUN apt update
 
 # Instala o pacote do ifconfig
-RUN apt install net-tools --yes
+#RUN apt install net-tools --yes
 
 #Instala o vim
-RUN apt install vim --yes
+#RUN apt install vim --yes
 
 # Instala o curl
-RUN apt install curl --yes
+#RUN apt install curl --yes
 
 # Dockerfile é um arquivo de texto que contém um conjunto de instruções para o Docker criar uma imagem personalizada. 
 # Ele especifica o que deve ser feito durante o processo de construção da imagem, como a instalação de pacotes, configuração do sistema, entre outras coisas. 
