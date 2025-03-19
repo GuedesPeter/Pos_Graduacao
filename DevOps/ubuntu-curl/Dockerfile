@@ -7,6 +7,9 @@ RUN apt update
 # Instala o pacote do ifconfig
 RUN apt install net-tools --yes
 
+#Instala o vim
+RUN apt install vim --yes
+
 # Instala o curl
 RUN apt install curl --yes
 
