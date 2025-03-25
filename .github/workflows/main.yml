@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Ou a branch de sua preferência
+  pull_request:
+    branches:
+      - main  # Ou a branch de sua preferência
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Configuração do ambiente (exemplo para Node.js, altere conforme necessário)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Versão do Node.js que você está usando
+
+      # Instalar dependências
+      - name: Install dependencies
+        run: npm install
+
+      # Rodar testes
+      - name: Run tests
+        run: npm test
