@@ -39,7 +39,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: eduardopeter91
-          password: ${{ secrets.DOCKER_PASSWORD }} 
+          password: dckr_pat_hoQvVOHNR4aO80eWPOKMtoXylmk
           
 
       - name: Construção da Imagem Docker
