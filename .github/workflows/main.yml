@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v6.15.0
         with:
           context: DevOps/material/conversao-temperatura-2/src
-          file: Dockerfile
+          file: DevOps/material/conversao-temperatura-2/src/Dockerfile
           push: true
           tags: |
             eduardopeter91/conversao-temperatura-2:v1
