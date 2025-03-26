@@ -33,3 +33,17 @@ jobs:
 
       - name: Execução do Teste
         run: mocha DevOps/material/conversao-temperatura-2/src/test/convert.js
+
+
+      - name: Construção da Imagem Docker
+        uses: docker/build-push-action@v6.15.0
+        with:
+          context: src
+          file: DevOps/material/conversao-temperatura-2/src/Dockerfile
+          push: true
+          tags: 
+            eduardopeter91/conversao-temperatura-2:v1
+            eduardopeter91/conversao-temperatura-2:latest
+
+
+        
