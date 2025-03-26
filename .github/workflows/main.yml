@@ -32,4 +32,4 @@ jobs:
           npm install
 
       - name: Execução do Teste
-        run: mocha src/test/convert.js
+        run: mocha DevOps/material/conversao-temperatura-2/src/test/convert.js
