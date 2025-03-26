@@ -21,3 +21,12 @@ jobs:
         uses: actions/setup-node@v4.3.0
         with:
           node-version: 16.15.1
+
+      - name: Install Mocha Test and package
+        run: 
+          cd DevOps;
+          cd material;
+          cd conversao-temperatura-2;
+          cd src;
+          npm install -g mocha;
+          npm install
