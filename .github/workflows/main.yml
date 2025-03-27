@@ -49,7 +49,7 @@ jobs:
           file: DevOps/material/conversao-temperatura-2/src/Dockerfile
           push: true
           tags: |
-            eduardopeter91/conversao-temperatura-2:v1
+            eduardopeter91/conversao-temperatura-2:${{github.run_number}}
             eduardopeter91/conversao-temperatura-2:latest
 
 
